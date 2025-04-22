@@ -223,6 +223,14 @@ nav {
     text-decoration: none;
   }
 
+  .rs-facebook-bloc, 
+  .rs-insta-bloc, 
+  .contact-line1 a:hover {
+    color: #d8ec20;
+    cursor: pointer;
+  }
+
+
 .rs-facebook-bloc img,
 .rs-insta-bloc img,
 .contact-line1 img {
