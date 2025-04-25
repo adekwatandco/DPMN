@@ -1,13 +1,21 @@
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main {
+  flex: 1;
+}
+
 @font-face {
     font-family: 'Hanken Grotesk';
     src: url('../fonts/HankenGrotesk-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-}
-
-body {
-    font-family: 'Hanken Grotesk', sans-serif;
-    padding-top: 20px;
 }
 
 a {
@@ -21,14 +29,15 @@ nav {
     height: 80px;
     font-size: 16px;
     font-weight: bold;
-    background-color: white;
+    background-color: #dbe2fc;
     display: flex;
     justify-content: space-around;
     align-items: center; 
-    gap: 40px; 
+    gap: 40px;
+   
   }
 
-  .nav a:hover {
+  nav a:hover {
     
     color: #d8ec20;
     cursor: pointer;
@@ -39,7 +48,7 @@ nav {
 
 
 /* Mobile navbar */
-@media (max-width: 768px) 
+@media (max-width: 768px) {}
   .nav-links {
     display: none;
     flex-direction: column;
@@ -160,26 +169,7 @@ footer a:hover {
     justify-content: space-between;
     align-items: flex-start;
     padding: 40px;
- 
     background-color: #e9eaec;
-  }
-
-  .video-card,
-  .bloc-droite {
-  flex: 1 1 200px; 
-  max-width: 500px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background-color: #abbaee;
-}
-  
-  .bloc-droite {
-      background-color: #f7f7f7;
-      color: #1a30f1;
-      width: 500px;
-      height: 300px;
-    
   }
   .video-wrapper {
     position: relative;
@@ -198,6 +188,39 @@ footer a:hover {
     border: none;
     border-radius: 20px;
   }
+  .video-card,
+  .bloc-droite {
+  flex: 1 1 200px; 
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #abbaee;
+}
+  
+.bloc-droite {
+  background-color: #f7f7f7;
+  color: #1a30f1;
+  width: 500px;
+  height: 300px;
+}
+
+/*responsive video*/ 
+
+@media (max-width: 768px) {
+  #bloc2 {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .video-card,
+  .bloc-droite {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+
   
   #bloc-multi {
     display: flex;
@@ -249,42 +272,88 @@ footer a:hover {
     color: #1a30f1;
   }
 
-  .call-to-action-image {
-    width: 100vw;
-    height: 100vh; 
+
+  /*page cagnotte.html*/
+
+  #bloc-call-to-action {
+    width: 100%; 
     position: relative;
     overflow: hidden;
     display: inline-block; 
   }
 
-  
-  .call-to-action-image img {
+  .megaphone img {
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
-    opacity: 0.5;
     display: block;
+    opacity: 0.3; 
+    z-index: 0;
   }
 
-
-  #bloc-action-text {
-    display: flex;
-    background-color: #e9eaec;
-  }
-.bloc-texte {
-    height: 100px;
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 12px;
-}
-  .don-btn {
-    width: 100%;
-    text-align: center;
+  .call-to-action {
     position: absolute;
-    bottom: 20px;
+    top: 40%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(15, 13, 153);
+    font-weight: bold;
+    font-size: xx-large;
   }
+  
+  .call-to-action h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+
+#boite-explication {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background-color: #f0f8ff; 
+  box-sizing: border-box;
+}
+
+.bloc-texte {
+  background-color: #dbeafe; 
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #1a1a1a;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+/*repsonsive page cagnotte.html*/
+
+@media (max-width: 768px) {
+  .megaphone img {
+    height: 350px;
+  }
+
+  .call-to-action h2 {
+    font-size: 1.5rem;
+  }
+
+  .don-btn button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+/*bouton don*/
+.don-btn {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3; 
+}
 
 .don-btn button {
   background-color: orange;
@@ -304,6 +373,15 @@ footer a:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
+.don-btn {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3; /* s'assurer qu'il est au-dessus */
+}
   .don-link {
     display: inline-block;
     background-color: #f57824;
@@ -321,14 +399,28 @@ footer a:hover {
     background-color: #e26518;
   }
  
-  #bloc-form {
+/*page formulaire de connexion.html*/
+
+  #form-user-bloc {
+    
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #abbaee;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    color: #1a30f1;
+  }
+  
+/*page paiement formulaire.html*/ 
+
+  #bloc-form1 {
     max-width: 900px;
     margin: 60px auto;
     padding: 40px;
-    background-color: #f7f7f7;
+    background-color: #abbaee;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    font-family: 'Hanken Grotesk', sans-serif;
     color: #1a30f1;
   }
   
@@ -337,13 +429,7 @@ footer a:hover {
     flex-wrap: wrap;
     gap: 40px;
   }
-  
-  .input-form h2 {
-    width: 100%;
-    text-align: center;
-    color: #f57824;
-    margin-bottom: 20px;
-  }
+   
   
   .input-gauche,
   .input-droite {
@@ -388,6 +474,7 @@ footer a:hover {
   #mention-leg-bloc h3 {
     color: #1a30f1;
   }
+
 .mention-text {
   background-color:#abbaee;
 
@@ -418,52 +505,64 @@ footer a:hover {
   padding: 40px;
   border-radius: 20px;
 }
-  footer {
-    background-color: #5b6bfd;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row; 
-    padding-top: 30px;
-    padding-bottom: 10px;
-    gap: 40px;
-  }
 
-  .rs-facebook-bloc, 
-  .rs-insta-bloc, 
-  .contact-line1 {
-    height: 50px;
-    width: 50px;
-    color: #d8ec20;
-    cursor: pointer;
-    height: 70px;
-    width: 70px;
-    text-decoration: none;
-  }
 
-  .rs-facebook-bloc, 
-  .rs-insta-bloc, 
-  .contact-line1 a:hover {
-    color: #d8ec20;
-    cursor: pointer;
-  }
+/*css footer*/
 
+footer {
+  background-color: #5b6bfd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  gap: 40px;
+  flex-wrap: wrap; 
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.rs-facebook-bloc, 
+.rs-insta-bloc, 
+.contact-line1 {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d8ec20;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rs-facebook-bloc:hover, 
+.rs-insta-bloc:hover, 
+.contact-line1 a:hover {
+  color: #d8ec20;
+}
 
 .rs-facebook-bloc img,
 .rs-insta-bloc img,
 .contact-line1 img {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 }
 
 footer p {
-    font-size: small;
-    color: #333;
-  }
+  font-size: small;
+  color: #333;
+}
 
 
-
-/*mobile bloc*/
+/*responsive bloc index.html*/
   @media screen and (max-width: 768px) {
     #bloc-multi {
       flex-direction: column;
@@ -502,35 +601,35 @@ footer p {
     }
   }
 
-  /*mobile footer*/
+
+  /*responsive footer*/
   @media (max-width: 768px) {
     footer {
       gap: 20px;
       padding: 20px 10px;
       text-align: center;
       flex-direction: column;
-    
-      
-      footer p {
-        font-size: 14px;
-      }
-
-      
-  .social-media {
-    display: flex;
-    justify-content: center;
-    gap: 20px;                     
-    margin-bottom: 20px;
-  }
-      .rs-facebook-bloc, 
-      .rs-insta-bloc, 
-      .contact-line1 {
-      
-          height: 50px;
-          width: 50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
+    }
+  
+    footer p {
+      font-size: 14px;
+    }
+  
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .rs-facebook-bloc,
+    .rs-insta-bloc,
+    .contact-line1 {
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
+ 
