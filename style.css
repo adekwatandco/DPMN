@@ -23,7 +23,8 @@ a {
   }
 
   
-nav {
+
+header {
     padding-top: 30px;
     padding-bottom: 30px;
     height: 80px;
@@ -35,6 +36,16 @@ nav {
     align-items: center; 
     gap: 40px;
    
+  }
+
+  header ul {
+    display: flex;
+    gap: 50px;
+  }
+
+  nav .link {
+    padding: 5px;
+    text-decoration: none;
   }
 
   nav a:hover {
@@ -291,6 +302,14 @@ footer a:hover {
     z-index: 0;
   }
 
+  #barre-progression .progress {
+    height: 20px;
+    background-color: #e9ecef;
+  }
+  
+  #barre-progression .progress-bar {
+    background-color: #007bff;
+  }
   .call-to-action {
     position: absolute;
     top: 40%;
@@ -380,7 +399,7 @@ footer a:hover {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3; /* s'assurer qu'il est au-dessus */
+  z-index: 3; 
 }
   .don-link {
     display: inline-block;
