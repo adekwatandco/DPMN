@@ -1,7 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 0; 
+  
+}
+
 
 body {
   font-family: 'Hanken Grotesk', sans-serif;
-  padding-top: 20px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -9,6 +14,7 @@ body {
 
 #main {
   flex: 1;
+  
 }
 
 @font-face {
@@ -39,6 +45,7 @@ header {
   }
 
   header ul {
+    list-style-type: none;
     display: flex;
     gap: 50px;
   }
@@ -392,15 +399,7 @@ footer a:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.don-btn {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3; 
-}
+
   .don-link {
     display: inline-block;
     background-color: #f57824;
@@ -417,6 +416,7 @@ footer a:hover {
   .don-link:hover {
     background-color: #e26518;
   }
+
  
 /*page formulaire de connexion.html*/
 
@@ -434,6 +434,7 @@ footer a:hover {
 /*page paiement formulaire.html*/ 
 
   #bloc-form1 {
+    flex: 1;
     max-width: 900px;
     margin: 60px auto;
     padding: 40px;
@@ -529,6 +530,7 @@ footer a:hover {
 /*css footer*/
 
 footer {
+
   background-color: #5b6bfd;
   display: flex;
   justify-content: space-around;
