@@ -290,6 +290,65 @@ footer a:hover {
     color: #1a30f1;
   }
 
+/////////////////////////*page techno.htm.*//////////////////////
+
+
+  main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+section {
+  display : flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin: 60px;
+}
+
+.bloc-contenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: #d4d7f1;
+  padding: 40px;
+  border-radius: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.bloc-contenu img {
+  max-width: 200px;
+  height: auto;
+}
+
+.a-propos-tensorflow-text,
+.a-propos-webrtc-text,
+.a-propos-azurespeech-text {
+
+  flex: 1;
+  font-size: 16px;
+  color: #1a30f1;
+}
+
+
+/* Responsive : Vidéos en colonne sur mobile */
+@media (max-width: 768px) {
+  #bloc-double-video {
+    flex-direction: column;
+  }
+
+  .video-gauche-fond,
+  .video2-droite-fond {
+    flex: 1 1 100%;
+  }
+
+  section:not(#bloc-double-video) {
+    height: auto; 
+  }
+}
 
   /*page cagnotte.html*/
 
