@@ -1,3 +1,33 @@
+//MODAL //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Objectif total 
 const goalAmount = 30000;
 

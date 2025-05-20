@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
 html, body {
+  height: 100%;
   margin: 0;
-  padding: 0; 
-  
-}
-
-
-body {
+  padding: 0;
   font-family: 'Hanken Grotesk', sans-serif;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
 
 
@@ -98,9 +99,9 @@ footer a:hover {
   .btn-login {
     height: 80px;
     width: 80px;
-    background-color: #ecf4f7;
-    border: 2px solid #f57824;
-    border-radius: 20px;
+    background-color: #d5e3f0;
+    border: 4px solid #f57824;
+    border-radius: 100px;
     display: flex;
     padding: 16px 32px;
     align-items: center;
@@ -365,13 +366,22 @@ flex-shrink: 0;
   flex-wrap: wrap;
   gap: 40px;
   padding: 60px;
-  background-color: #c2bff3;
+  background-color: #ebebf0;
   box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.card-text h2 {
+  font-size: 25px;
+  font-family:"Montserrat", sans-serif; 
+}
+
+.card-text p {
+  font-size: 20px;
+}
+
 .card {
-  background-color: #d1ecf9; 
+  background-color: #ffffff; 
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -398,6 +408,7 @@ align-items: center;
 gap: 16px;
 flex-shrink: 0;
 align-self: stretch;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
 }
 /* Responsive Vidéos en colonne sur mobile */
@@ -557,7 +568,7 @@ align-self: stretch;
 /*page formulaire de connexion.html*/
 
   #form-user-bloc {
-    
+    flex: 1;
     max-width: 500px;
     margin: 60px auto;
     padding: 40px;
@@ -672,10 +683,9 @@ footer {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  padding: 20px;
   gap: 40px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .social-media {
